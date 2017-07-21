@@ -5,7 +5,7 @@ class TripsController < ApplicationController
  end
 
   def create
-    #puts "Creating new trip"
+    #puts "Creating testNew trip"
     #render plain: params[:trip].inspect
     @trip=Trip.new(params.require(:trip).permit(:from, :to,:amount))
     @trip.save

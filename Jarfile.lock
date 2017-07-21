@@ -1,0 +1,11 @@
+---
+:runtime:
+- commons-lang:commons-lang:jar:2.6
+- io.reactivex:rxjava:jar:1.1.8
+- org.slf4j:slf4j-api:jar:1.7.0
+- org.slf4j:slf4j-simple:jar:1.7.5
+- commons-logging:commons-logging:jar:1.1.1
+- com.netflix.hystrix:hystrix-core:jar:1.5.5
+- commons-configuration:commons-configuration:jar:1.8
+- com.netflix.archaius:archaius-core:jar:0.4.1
+- org.hdrhistogram:HdrHistogram:jar:2.1.9

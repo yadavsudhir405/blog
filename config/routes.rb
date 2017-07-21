@@ -1,13 +1,15 @@
 Rails.application.routes.draw do
   get 'welcome/index'
   get 'welcome/greeting'
-
-
   get 'login/login1'
 
+  get 'ping'=>"ping_test#ping"
+
   post 'authenticate'=>'login#authenticate'
+  get 'greetings/index'=>'greetings#index'
 
   root 'welcome#index'
+
 
   resources :articles
   resources :trips

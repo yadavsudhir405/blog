@@ -10,5 +10,4 @@ class WelcomeController < ApplicationController
     render 'greeting'
   end
 
-
 end
