@@ -4,3 +4,7 @@ class DemotestController < ApplicationController
     puts "Inside Democontroller#greeting method"
   end
 end
+#This is just another commit to test branch
+#1
+#2
+#3
