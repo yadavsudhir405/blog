@@ -4,3 +4,4 @@ class GreetingsController < ApplicationController
     p "Inside Greeting controller"
   end
 end
+#changes done for master
