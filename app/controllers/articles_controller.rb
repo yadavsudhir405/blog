@@ -37,3 +37,4 @@ class ArticlesController < ApplicationController
    end
 
 end
+#Lines added for test branch
