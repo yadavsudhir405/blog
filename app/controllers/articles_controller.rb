@@ -13,8 +13,9 @@ class ArticlesController < ApplicationController
       render 'new'
     end
 
-    
   end
+
+  #This is just to check git commmit 
 
   def edit
     @article = Article.find(params[:id])
