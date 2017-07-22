@@ -15,7 +15,8 @@ class ArticlesController < ApplicationController
 
   end
 
-  #This is just to check git commmit 
+  #This is just to check git commmit
+  #Another line added to test branch
 
   def edit
     @article = Article.find(params[:id])
