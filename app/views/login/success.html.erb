@@ -5,7 +5,12 @@
   <p>
     <%= link_to 'home page', controller: "articles"  %>
   </p>
-
+  <p>
+    <%= link_to 'To Add new article',  controller: 'articles', action: 'new'  %>
+  </p>
+  <p>
+    <%= link_to 'To Add new article',  new_article_path  %>
+  </p>
   <p>
     <%= link_to 'See all articles',  controller: 'articles', action: 'index'  %>
   </p>
@@ -17,11 +22,6 @@
   <p>
     <%= link_to 'See Second Article',  controller: 'articles', action: 'show',id: 2  %>
   </p>
-
-  <p>
-    <%= link_to 'To Add an article',  controller: 'articles', action: 'new'  %>
-  </p>
-
   <p>
     <%= link_to 'See all articles',  {controller: 'articles', action: 'index'}  %>
   </p>
@@ -33,8 +33,5 @@
   </p>
   <p>
     <%= link_to 'See all articles',  articles_path  %>
-  </p>
-  <p>
-    <%= link_to 'Link to single article wont wotk',  article_path(@article)  %>
   </p>
 </div>

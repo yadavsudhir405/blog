@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
+
   get 'welcome/index'
   get 'welcome/greeting'
+
   get 'login'=>"login#login"
   post 'authenticate'=>"login#authenticate"
 

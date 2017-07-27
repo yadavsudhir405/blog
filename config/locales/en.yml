@@ -20,4 +20,12 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  welcome:
+    message: "Welcome to the page"
+    login-message: "Please enter your credential in English"
+  enter:
+    username: "Please enter user name"
+    password: "Please enter password"
+  login:
+    success: "You have successfully logged in"
+    fail: "Login fail"
