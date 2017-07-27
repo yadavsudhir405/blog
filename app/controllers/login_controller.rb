@@ -8,8 +8,12 @@ class LoginController <ApplicationController
     if (username=="admin") && (password=="admin") then
       render "success"
     else
-      render "login1"
+      render "fail"
     end
+  end
+
+  def login
+    render "login1"
   end
 end
 
