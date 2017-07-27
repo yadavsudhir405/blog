@@ -3,6 +3,8 @@ class WelcomeController < ApplicationController
 
   def index
     puts "Controllers being called"
+    p params[:utm_source]
+    p params[:utm_medium]
   end
 
   def greeting
