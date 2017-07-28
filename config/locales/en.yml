@@ -27,5 +27,5 @@ en:
     username: "Please enter user name"
     password: "Please enter password"
   login:
-    success: "You have successfully logged in"
+    success: "You have successfully logged in English"
     fail: "Login fail"
