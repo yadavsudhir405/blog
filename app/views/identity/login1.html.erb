@@ -1,0 +1,10 @@
+<h1><%= I18n.t("welcome.login-message") %></h1>
+<h1>Tdst</h1>
+<div class="form-group">
+  <%= form_for 'login',url: '/authenticate' do |f|%>
+      <%= f.text_field :username, :placeholder => "#{I18n.t('enter.username')}" %>
+      <%= f.text_field :password_field, :placeholder => "#{I18n.t('enter.password')}" %>
+      <%= f.submit %>
+  <% end %>
+</form>
+</div>

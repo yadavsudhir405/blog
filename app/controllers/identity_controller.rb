@@ -1,4 +1,4 @@
-class LoginController <ApplicationController
+class IdentityController <ApplicationController
 
   def authenticate
     puts "Validating users"
@@ -12,7 +12,8 @@ class LoginController <ApplicationController
     end
   end
 
-  def login
+  def identify
+    p "Inside Login controller and redirecting to login page"
     render "login1"
   end
 end
