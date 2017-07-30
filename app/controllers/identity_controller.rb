@@ -2,8 +2,8 @@ class IdentityController <ApplicationController
 
   def authenticate
     puts "Validating users"
-    username=params[:username]
-    password=params[:password]
+    username=identity_params.require(:username)
+    password=identity_params.require(:password)
     puts "username:#{username} and password:#{password}"
     if (username=="admin") && (password=="admin") then
       render "success"
@@ -15,6 +15,10 @@ class IdentityController <ApplicationController
   def identify
     p "Inside Login controller and redirecting to login page"
     render "login1"
+  end
+
+  def identity_params
+    params.require(:identity).permit(['username','password'])
   end
 end
 

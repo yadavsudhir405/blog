@@ -26,6 +26,8 @@ en:
   enter:
     username: "Please enter user name"
     password: "Please enter password"
+    submit: "Submit"
+    clear: "Clear"
   login:
     success: "You have successfully logged in English"
     fail: "Login fail"
