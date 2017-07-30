@@ -31,3 +31,7 @@ en:
   login:
     success: "You have successfully logged in English"
     fail: "Login fail"
+  label:
+    username: "Username"
+    password: "Password"
+

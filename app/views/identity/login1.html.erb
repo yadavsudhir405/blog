@@ -2,11 +2,11 @@
 <div class="form-group">
   <%= form_for 'identity',url: '/authenticate' do |f|%>
       <p>
-        <%= f.label "username"%>
+        <%= f.label "#{I18n.t('label.username')}"%>
         <%=  f.text_field :username, :placeholder => "#{I18n.t('enter.username')}" %>
       </p>
       <p>
-        <%= f.label "password" %>
+        <%= f.label "#{I18n.t('label.password')}" %>
         <%= f.password_field :password, :placeholder =>"#{I18n.t('enter.password')}" %>
       </p>
 
