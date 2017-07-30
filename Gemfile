@@ -30,6 +30,8 @@ gem 'figaro', '~>1.1.1'
 gem 'rspec'
 gem 'wrest'
 
+gem 'http_accept_language'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
