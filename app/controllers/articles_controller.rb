@@ -1,7 +1,19 @@
 class ArticlesController < ApplicationController
 
+  def index
+    @articles = Article.all
+  end
+
+  def show
+    @article = Article.find(params[:id])
+  end
+
   def new
     @article=Article.new
+  end
+
+  def edit
+    @article = Article.find(params[:id])
   end
 
   def create
@@ -15,20 +27,16 @@ class ArticlesController < ApplicationController
 
   end
 
-  #This is just to check git commmit
-  #Another line added to test branch
-
-  def edit
-    @article = Article.find(params[:id])
+  def update
+    @article=Article.find(params[:id])
+    if @article.update(article_param)
+      redirect_to @article
+    else
+      render 'edit'
+    end
   end
 
-  def show
-    @article = Article.find(params[:id])
-  end
 
-  def index
-    @articles = Article.all
-  end
 
   private
 
