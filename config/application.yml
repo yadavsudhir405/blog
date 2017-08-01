@@ -1,6 +1,0 @@
-STAN_MARSH_PASS_KEY: 'k1lsa4jf20kLrHGltb4pVosDeCfy3dUmWGRfOolQuME='
-STAN_MARSH_HOST: 'http://integration-stan-marsh-internal.golabs.io'
-STAN_MARSH_CLIENT_ID: 'ops-service-integration'
-
-hystrix_command_BookingDetails_execution_isolation_thread_timeoutInMilliseconds: 1000
-hystrix_command_FindUserById_execution_isolation_thread_timeoutInMilliseconds: 1000
