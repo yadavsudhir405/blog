@@ -25,10 +25,13 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'figaro', '~>1.1.1'
 
-gem 'rspec'
 gem 'wrest'
 
 gem 'http_accept_language'
+
+group 'development','test' do
+  gem 'rspec','~> 3.5'
+end
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
