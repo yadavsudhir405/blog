@@ -25,6 +25,7 @@ module Blog
 
     config.active_job.queue_adapter = :sidekiq
 
+
     config.i18n.default_locale = :en
     config.i18n.available_locales = [:en, :hi]
     config.i18n.fallbacks = true
