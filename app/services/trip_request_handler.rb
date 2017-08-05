@@ -10,8 +10,14 @@ class TripRequestHandler
   end
   
   
-  def process
+  def new_trip
     @trip = Trip.new(:from =>@from, :to => @to, :amount => @amount)
     @trip.save
+  end
+
+  def update_trip(id)
+      trip = Trip.find(id)
+      trip_hash={:from => @from, :to => @to, :amount => @amount}
+      trip.update(trip_hash)
   end
 end
