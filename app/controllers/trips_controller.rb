@@ -1,24 +1,27 @@
 class TripsController < ApplicationController
 
  def new
-
+  
  end
-
+  
   def create
-    #puts "Creating testNew trip"
-    #render plain: params[:trip].inspect
-    @trip=Trip.new(params.require(:trip).permit(:from, :to,:amount))
-    @trip.save
-    redirect_to @trip
+    trip_request_handler = TripRequestHandler.new(params[:trip][:traveller], params[:trip][:from],
+                           params[:trip][:to],500.00)
 
+    if trip_request_handler.process
+      @trip = trip_request_handler.trip
+      redirect_to @trip
+    else
+      render 'new'
+    end
   end
 
  def show
    @trip = Trip.find(params[:id])
  end
-
-
-  def index
-    @trips=Trip.all
+  
+  def trips_params
+   params.require[:trip].permit([:traveller, :from, :to])
   end
+
 end
