@@ -1,19 +1,27 @@
-
-<h1>Listing all trips</h1>
-
-<table>
-  <tr>
-    <th>From</th>
-    <th>To</th>
-    <th>Amount</th>
-  </tr>
-
-  <% @trips.each  do |trip| %>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<div class="container">
+  <h2>Trips</h2>
+  <p>Displaying all your trips:</p>
+  <table class="table">
+    <thead>
     <tr>
-      <td><%=trip.from %></td>
-      <td><%=trip.to %></td>
-      <td><%=trip.amount %></td>
-      <td><%= link_to 'show',trip_path(trip)%></td>
+      <th>From</th>
+      <th>To</th>
+      <th>Fair</th>
+      <th>Action</th>
     </tr>
-  <% end %>
-</table>
+    </thead>
+    <tbody>
+    <% @trips.each do |trip| %>
+    <tr>
+      <td><%= trip.from %></td>
+      <td><%= trip.to %></td>
+      <td><%= trip.amount %></td>
+      <td><%= link_to 'show',trip_path(trip) %></td>
+      <td><%= link_to 'edit',edit_trip_path(trip) %></td>
+      <td><%= link_to 'delete',trip_path(trip), method: :delete, data: {confirm: 'Are you sure?'} %></td>
+    </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>

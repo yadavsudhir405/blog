@@ -1,8 +1,17 @@
 class TripsController < ApplicationController
 
+
+  def index
+    @trips = Trip.all
+  end
+
  def new
   
  end
+  
+  def edit
+    @trip = Trip.find(params[:id])
+  end
   
   def create
     trip_request_handler = TripRequestHandler.new(params[:trip][:traveller], params[:trip][:from],
