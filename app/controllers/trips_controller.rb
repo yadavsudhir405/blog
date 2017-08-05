@@ -10,7 +10,7 @@ class TripsController < ApplicationController
   end
 
  def new
-  
+  @trip = Trip.new
  end
   
   def edit
@@ -18,8 +18,8 @@ class TripsController < ApplicationController
   end
   
   def create
-    trip_request_handler = TripRequestHandler.new(params[:trip][:traveller], params[:trip][:from],
-                           params[:trip][:to],500.00)
+    trip_request_handler = TripRequestHandler.new(trips_params.require(:traveller), trips_params.require(:from),
+                           trips_params.require(:to),trips_params.require(:amount))
 
     if trip_request_handler.new_trip
       @trip = trip_request_handler.trip
@@ -32,8 +32,8 @@ class TripsController < ApplicationController
   def update
     id = params[:id]
     p "*****#{id}"
-    trip_request_handler= TripRequestHandler.new(params[:trip][:traveller], params[:trip][:from],
-        params[:trip][:to],500.00)
+    trip_request_handler= TripRequestHandler.new(trips_params.require(:traveller), trips_params.require(:from),
+                                                 trips_params.require(:to),trips_params.require('amount'))
     trip_request_handler.update_trip(id)
     redirect_to trips_path
 
@@ -44,8 +44,11 @@ class TripsController < ApplicationController
     @trip.destroy
     redirect_to trips_path
   end
-  def trips_params
-   params.require[:trip].permit([:traveller, :from, :to])
-  end
+
+  private
+    def trips_params
+      params.require(:trip).permit(['traveller', 'from', 'to', 'amount'])
+
+    end
 
 end

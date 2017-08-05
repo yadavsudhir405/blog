@@ -5,15 +5,19 @@
   <table class="table">
     <thead>
     <tr>
+      <th>Traveller</th>
       <th>From</th>
       <th>To</th>
       <th>Fair</th>
+      <th>Action</th>
+      <th>Action</th>
       <th>Action</th>
     </tr>
     </thead>
     <tbody>
     <% @trips.each do |trip| %>
     <tr>
+      <td><%= trip.traveller %></td>
       <td><%= trip.from %></td>
       <td><%= trip.to %></td>
       <td><%= trip.amount %></td>
