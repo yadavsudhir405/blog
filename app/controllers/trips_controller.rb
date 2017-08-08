@@ -25,13 +25,14 @@ class TripsController < ApplicationController
       @trip = trip_request_handler.trip
       redirect_to @trip
     else
+      @trip = trip_request_handler.trip
+      p @trip.errors.any?
       render 'new'
     end
   end
 
   def update
     id = params[:id]
-    p "*****#{id}"
     trip_request_handler= TripRequestHandler.new(trips_params.require(:traveller), trips_params.require(:from),
                                                  trips_params.require(:to),trips_params.require('amount'))
     trip_request_handler.update_trip(id)

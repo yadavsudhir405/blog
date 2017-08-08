@@ -2,6 +2,19 @@
 
 <%= form_for(@trip) do |f| %>
 
+    <% if @trip.errors.any?  %>
+        <h2>
+          <% pluralize( @trip.errors.count,'errors') %>
+          prohibited from being saved
+        </h2>
+        <ul>
+          <% @trip.errors.full_messages.each do |message|  %>
+              <li><%= message %></li>
+          <%  end %>
+        </ul>
+
+    <% end %>
+
     <div class= "form-group">
       <%= f.label :traveller,:class=> "control-label col-sm-2" %>
       <div class="col-sm-10">
