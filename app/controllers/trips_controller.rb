@@ -18,8 +18,8 @@ class TripsController < ApplicationController
   end
   
   def create
-    trip_request_handler = TripRequestHandler.new(trips_params.require(:traveller), trips_params.require(:from),
-                           trips_params.require(:to),trips_params.require(:amount))
+
+    trip_request_handler = TripRequestHandler.new(trips_params)
 
     if trip_request_handler.new_trip
       @trip = trip_request_handler.trip
@@ -33,8 +33,7 @@ class TripsController < ApplicationController
 
   def update
     id = params[:id]
-    trip_request_handler= TripRequestHandler.new(trips_params.require(:traveller), trips_params.require(:from),
-                                                 trips_params.require(:to),trips_params.require('amount'))
+    trip_request_handler= TripRequestHandler.new(trips_params)
     trip_request_handler.update_trip(id)
     redirect_to trips_path
 

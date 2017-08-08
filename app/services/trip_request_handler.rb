@@ -2,11 +2,11 @@ class TripRequestHandler
 
   attr_reader :trip
   
-  def initialize( traveller,from, to, amount)
-    @traveller = traveller
-    @from = from
-    @to = to
-    @amount = amount
+  def initialize( trip)
+    @traveller = trip.fetch(:traveller, nil)
+    @from = trip.fetch(:from, nil)
+    @to = trip.fetch(:to, nil)
+    @amount = trip.fetch(:amount, nil)
   end
   
   
