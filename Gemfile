@@ -34,7 +34,6 @@ group 'development','test' do
   gem 'rspec','~> 3.5'
 end
 
-gem 'bootstrap-modal-rails'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
