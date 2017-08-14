@@ -1,11 +1,14 @@
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<div class="jumbotron text-center" >
+  <h1>My First Bootstrap Page</h1>
+  <p>Resize this responsive page to see the effect!</p>
+</div>
 <div>
   <%= link_to 'New Trip',new_trip_path %>
 </div>
 <div class="container">
   <h2>Trips</h2>
   <p>Displaying all your trips:</p>
-  <table class="table">
+  <table class="table table-striped table-hover table-bordered " >
     <thead>
     <tr>
       <th>Traveller</th>
