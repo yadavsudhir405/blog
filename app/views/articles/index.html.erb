@@ -1,11 +1,17 @@
-e<h1>Listing articles</h1>
+<div class="jumbotron text-center">
+  <h1>Listing All Articles</h1>
+  <p>Articles</p>
+</div>
 
 <%= link_to 'Add new article',new_article_path %>
 
-<table>
+<table class="table table-hover table-bordered">
   <tr>
     <th>Title</th>
     <th>Text</th>
+    <th>Action</th>
+    <th>Action</th>
+    <th>Action</th>
   </tr>
 
   <% @articles.each do |article| %>
