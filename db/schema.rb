@@ -11,16 +11,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170815045601) do
+ActiveRecord::Schema.define(version: 20170815121615) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "addresses", force: :cascade do |t|
+    t.string  "city"
+    t.string  "zipcode"
+    t.integer "client_id"
+  end
+
+  add_index "addresses", ["client_id"], name: "index_addresses_on_client_id", using: :btree
 
   create_table "articles", force: :cascade do |t|
     t.string   "title"
     t.text     "text"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "clients", force: :cascade do |t|
+    t.string "name"
   end
 
   create_table "comments", force: :cascade do |t|
@@ -33,6 +45,12 @@ ActiveRecord::Schema.define(version: 20170815045601) do
 
   add_index "comments", ["article_id"], name: "index_comments_on_article_id", using: :btree
 
+  create_table "orders", force: :cascade do |t|
+    t.integer "client_id"
+  end
+
+  add_index "orders", ["client_id"], name: "index_orders_on_client_id", using: :btree
+
   create_table "people", force: :cascade do |t|
     t.string   "name"
     t.integer  "age"
@@ -42,8 +60,8 @@ ActiveRecord::Schema.define(version: 20170815045601) do
   end
 
   create_table "products", force: :cascade do |t|
-    t.string "name"
-    t.string "part_number"
+    t.string  "name"
+    t.decimal "price"
   end
 
   create_table "trips", force: :cascade do |t|
@@ -62,5 +80,7 @@ ActiveRecord::Schema.define(version: 20170815045601) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "addresses", "clients"
   add_foreign_key "comments", "articles"
+  add_foreign_key "orders", "clients"
 end
