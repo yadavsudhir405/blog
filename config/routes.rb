@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :widgets
   get 'welcome/index'
   get 'welcome/greeting'
 
