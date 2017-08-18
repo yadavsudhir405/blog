@@ -32,7 +32,21 @@ gem 'wrest'
 gem 'http_accept_language'
 
 group 'development','test' do
-  gem 'rspec','~> 3.5'
+  gem 'rspec-rails','~> 3.5'
+  gem 'factory_girl_rails', "~> 4.0"
+  gem 'rspec-http'
+  gem 'rspec_api_documentation'
+  gem 'shoulda-matchers'
+  gem 'pry'
+  gem 'database_cleaner'
+  gem 'timecop'
+end
+
+group :test do
+  gem 'fakeredis'
+  gem 'simplecov', :require => false
+  gem 'webmock'
+  gem 'rspec-sidekiq'
 end
 
 # Use ActiveModel has_secure_password
