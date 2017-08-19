@@ -14,7 +14,7 @@ RSpec.describe "Using an array as stack" do
     expect(@stack).to be_empty
   end
 
-  context "after an item pushed to stack" do
+  context  "after an item pushed to stack" do
 
     before(:example) do
       @stack = build_stack
