@@ -14,7 +14,7 @@ RSpec.describe "Using an array as stack" do
     expect(@stack).to be_empty
   end
 
-  describe "after an item pushed to stack" do
+  context "after an item pushed to stack" do
 
     before(:example) do
       @stack = build_stack
@@ -24,7 +24,6 @@ RSpec.describe "Using an array as stack" do
     it "should pop the same element" do
       expect(@stack.pop).to eq(:item)
     end
-
   end
 
 end
