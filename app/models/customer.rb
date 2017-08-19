@@ -6,6 +6,7 @@ class Customer
   validates :email, presence: true
   validates :contact_no, presence: true
 
+  
   attr_accessor :first_name, :last_name, :email ,:contact_no
 
   def initialize(first_name,last_name,email,contact_no)
