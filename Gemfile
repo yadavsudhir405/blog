@@ -32,7 +32,7 @@ gem 'wrest'
 gem 'http_accept_language'
 
 group 'development','test' do
-  gem 'rspec-rails','~> 3.5'
+  gem 'rspec-rails','~> 3.6'
   gem 'factory_girl_rails', "~> 4.0"
   gem 'rspec-http'
   gem 'rspec_api_documentation'
