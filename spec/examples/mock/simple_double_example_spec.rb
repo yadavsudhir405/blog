@@ -17,4 +17,13 @@ RSpec.describe "Simple double example" do
       expect(double.bar).to eq 4
     end
   end
+
+  context "with allow message with parameter and return value" do
+    it "should return greeting message" do
+      double = double("Some class")
+      allow(double).to receive(:greet_me).with("good morning", "foo").and_return("good morning foo")
+
+      expect(double.greet_me("good morning", "foo" )).to eq("good morning foo")
+    end
+  end
 end
