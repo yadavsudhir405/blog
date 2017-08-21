@@ -1,13 +1,8 @@
-FactoryGirl.define  do
-  factory :customer, class: Customer do
-    first_name {"foo"}
-    last_name {"foo"}
-    email {"foo@gmail.com"}
-    contact_no {"123214234"}
-
-    initialize_with {
-      new(first_name, last_name, email, contact_no)
-    }
+FactoryGirl.define do
+  factory :customer, class: User do
+    first_name "foe"
+    last_name "joe"
+    email "foe@gmail.com"
+    contact_no "8374858593"
   end
-
 end
