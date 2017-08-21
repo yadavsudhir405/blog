@@ -22,6 +22,15 @@ RSpec.describe ArticlesController, type: :controller do
         expect(response).to render_template('index')
       end
   end
+  describe "create" do
+    it "should create a new article and save " do
+      param ={:title => "foo", :text => "bar"}
 
-  desc
+      post :create,article:param
+      @article = Article.find_by(:title => "foo")
+
+      expect(response).to render_template(@article)
+
+    end
+  end
 end
