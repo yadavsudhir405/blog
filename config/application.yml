@@ -17,7 +17,7 @@ SENTRY_REDIS_POOL_SIZE: '5'
 
 RAILS_ENV: 'development'
 POSTGRES_HOST: 'localhost'
-DATABASE: 'dev_db'
+DATABASE: 'demo1'
 DB_USER: 'postgres'
 DB_PASSWORD: 'postgres'
 DB_POOL: 5

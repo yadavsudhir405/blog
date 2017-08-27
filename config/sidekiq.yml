@@ -1,0 +1,5 @@
+:concurrency: 25
+:queues:
+  - ['critical', 5]
+  - ['medium', 5]
+  - ['low', 3]

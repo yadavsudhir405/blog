@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+
+
   resources :widgets
   get 'welcome/index'
   get 'welcome/greeting'
@@ -13,6 +15,8 @@ Rails.application.routes.draw do
   get 'greetings/index'=>'greetings#index'
 
   root 'welcome#index'
+
+  resources :triggers
 
 
   resources :articles do
