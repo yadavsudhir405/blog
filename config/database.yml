@@ -21,7 +21,7 @@ default: &default
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: demo1
+  database: demo
 
 <%= Figaro.env.rails_env %>:
   <<: *default

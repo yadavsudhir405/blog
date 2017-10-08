@@ -1,6 +1,7 @@
+require 'sidekiq/web'
 Rails.application.routes.draw do
 
-
+  require 'sidekiq/web'
 
   resources :widgets
   get 'welcome/index'
