@@ -7,9 +7,9 @@ env:
   - DB=postgres
 
 script:
-  -RAILS_ENV=test bundle exec rake db:migrate --trace
+  - RAILS_ENV=test bundle exec rake db:migrate --trace
   - bundle exec rake db:test:prepare
   - bundle exec rspec spec/
 
 before_script:
-  - postgres -e 'create database demo'
+  - postgres -e 'create database demo_test'
