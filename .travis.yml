@@ -1,17 +1,17 @@
 language: ruby
-
 rvm:
   - jruby-9.1.6.0
-
 services:
   - postgresql
-
 before_script:
   - bundle install
   - psql -c 'create database demo_test;' -U postgres
-
 script:
   - RAILS_ENV=test bundle exec rake db:migrate --trace
   - bundle exec rake db:test:prepare
   - bundle exec rspec spec/
-
+deploy:
+  provider: heroku
+  api_key:
+    secure: G9rZ6U10h5MurfO0z/GgWaelY+GaYX3gLQY71P5MNwn+hVcOX0bxNkjmdT1VahnPiyrDD18joAMmT8/EOmSGGoojvdfngkI8j9KSLdCKCNsK0+oB7HPSmONJM8CtfghkjYVMvTMis4Uvifb1RxaguNmSDmSuZY0d2KXZZHvCNCEjO7vyiSMGCRsI1rCML8vRN6teLa7Wl+wyr/2hbBJ+9AnccLMsGXHNwPSIdkXVIKLeON4fF7YUSXJ/UnoJ2DFKvbjJCTJ1df3gGj7SyVTHs5yHmLMzeVyvJw6NGjPcJFakMu2R+njbhnjd5AB1Knv1JNIRHfwbwR3tlByUQfvvpnIteQCe0hEqGyTifc8c1HyxYC5L+6MCg9WqPcJo63tu4PPhl1VL5tKUJc2dPIZRoG5e7zWjC6OfVPg5X97NE1Gq0mwcW1NOpH1HwVLMfOfqfdOQRfw0/akGm9D9TOU5fCnLg6rL/a3GneuKkc4cC82EJqdX9JkC0bVisVyCkJNBFnHnW15aCWl7ydx4yHEfMHdYfXjh7CRsCVCqr1YPWf87vjPg1Xg3lRfHf4rqUZTofkHwWeHB3GOeuPpCbroQSpruep8sXMMr59isy9+knCuryN2vAVA/bQp/Hf3INgcdNC5bHuHBE4S8kwlIixvxn1SkNT6SBsx8Xaeoiss/6q0=
+  app: demo-blog
