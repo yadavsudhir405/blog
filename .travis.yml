@@ -9,6 +9,8 @@ env:
   - DATABASE=demo_test
   - DB_USER=postgres
   - DB_PASSWORD=postgres
+  - POSTGRES_HOST=localhost
+  - DB_POOL=5
 
 
 services:
