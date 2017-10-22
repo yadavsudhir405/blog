@@ -5,6 +5,11 @@ rvm:
 
 env:
   - DB=postgres
+  - SIDEKIQ_REDIS_HOST=localhost
+  - DATABASE=demo_test
+  - DB_USER=postgres
+  - DB_PASSWORD=postgres
+
 
 services:
   - postgresql
