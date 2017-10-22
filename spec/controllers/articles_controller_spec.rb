@@ -27,10 +27,17 @@ RSpec.describe ArticlesController, type: :controller do
       param ={:title => "foo", :text => "bar"}
 
       post :create,article:param
-      @article = Article.find_by(:title => "foo")
 
+      @article = Article.find_by(:title => "foo")
       expect(response).to render_template(@article)
 
+    end
+  end
+
+  describe "#destroy" do
+    it ' should destroy the article' do
+
+      article = FactoryGirl.create(:article)
     end
   end
 end
