@@ -30,10 +30,11 @@ gem 'figaro', '~>1.1.1'
 gem 'wrest'
 
 gem 'http_accept_language'
-
+gem 'sidekiq', '~> 5.0', '>= 5.0.5'
 
 group 'development','test' do
   # gem "sidekiq"
+  gem 'sidekiq', '~> 5.0', '>= 5.0.5'
   gem 'rspec-rails','~> 3.6'
   gem 'factory_girl_rails', "~> 4.0"
   gem 'rspec-http'
