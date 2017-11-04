@@ -118,6 +118,7 @@ GEM
       method_source (~> 0.9.0)
       spoon (~> 0.0)
     public_suffix (3.0.0)
+    puma (3.9.1-java)
     rack (1.6.8)
     rack-protection (2.0.0)
       rack
@@ -262,6 +263,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   pry
+  puma (~> 3.0)
   rails (= 4.2.5)
   rspec-http
   rspec-rails (~> 3.6)

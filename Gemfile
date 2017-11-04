@@ -28,7 +28,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'figaro', '~>1.1.1'
 
 gem 'wrest'
-
+gem 'puma', '~> 3.0'
 gem 'http_accept_language'
 gem 'sidekiq', '~> 5.0', '>= 5.0.5'
 
