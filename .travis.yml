@@ -14,6 +14,6 @@ deploy:
   provider: heroku
   api_key:
     secure: YImwXzL6jp2yjOPpCNSE4pMoubtFEtYSff6z5AwaluA0NtfWeQFFmTWJg1CzHjowiQRGWuF1v7K96LGoZjc3TIDirxQBNk50Bm+Dm11XiTB7y42WqYSFfFTqzEwN3Bl5xag0SFlaoyqkzufd1pffxyeOVTr5IofEbdyz2pzpQt6zHqJ7foGgGnCpEN+7FQxl/RCRTqGcWvVnLFmaCJi2JZ9BNUx4RZ8CZxg6qxldKkA7epmW1RA1lt8ovDXF7oqh7h7+o81j8AALhR3KjV+CuuIXJwS+Z50RwtszlmDMQ8KCpSDua4a60mn1rEySpmtrhiY9p99p886caIdhgPdYLQ0CNXERMOoKAjkU3J//v/A5B69tHOvD380GTCNk7IvSqFUfNVYxtiNSVAgRsyJUff6YuvluyAhBqRMZI+8LhWvz5DeBKtadAsIwfIBpJPeIBC16OMYjKg9pxjP72Cpn0v4GZbUsRe3A1Rf5G4pd1wJ/k3uqAoOlHA3sXhm1sa9xfE3/1IJvBGtQS6fYwvsRaqR/Ug2YMjKcnSsuo+S/vIn8C0bpEF3tVQJZoEAmg7srzid1HvhCXHPupmV2h9Ya7PdtMlp0nn0//M5s27L1EPT0KndL7YgAOx5muJ/P2d4oNebh+ARbB7Vb2JpBHUgq+yHAO0zs2/UzGpmyQ1oncpM=
-  app: my-rail-app
+  app: sleepy-shore-55582
   on:
     repo: yadavsudhir405/blog
