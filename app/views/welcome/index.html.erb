@@ -1,4 +1,29 @@
 <h1> Updated Hello, Rails!!!</h1>
 
-<%= link_to "Click here to view all articles" , controller: 'articles'   %>
+<a class="popupimage btn btn-primary" href=<%= image_url("vehicles/v1.jpg", :alt => "First car") %>>
+  image1
+</a>
+<a class="popupimage btn btn-primary" href=<%= image_url("vehicles/v2.jpg", :alt => "Second car") %>>
+  image1
+</a>
+<a class="popupimage btn btn-primary" href=<%= image_url("vehicles/v3.jpg", :alt => "Third car") %>>
+  image1
+</a>
+
+
+<div class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <img src=""  class="img-responsive" style="width: 100%"/>
+    </div>
+  </div>
+
+</div>
+
+<%= javascript_include_tag('homepage/index')%>
+
+<div class="btn btn-danger" style="align-content: center" >
+  <%= link_to "Click here to view all articles" , controller: 'articles'   %>
+</div>
+
 
